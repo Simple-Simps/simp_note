@@ -130,7 +130,10 @@ function showNewNote() {
             addANote(noteTitle,textArray[1])
             createList(noteTitle)
             myText.remove
+            myText.value = ''
+            
         })
+        
         
         const cancelButton = document.getElementById("cancelBtn")
         cancelButton.addEventListener("click" , () => {
@@ -157,4 +160,5 @@ async function side(){
 
 //starting functions
 side()
+
 
