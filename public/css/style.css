@@ -83,7 +83,7 @@ button {
   }
 
 #saveBtn {
-    position: float;
+    position: relative;
     width: 100px;
     height: 40px;
     /* top: 400px;
@@ -94,7 +94,8 @@ button {
   }
   
 #cancelBtn {
-    position: float;
+    position: relative;
+    bottom: 60px;
     width: 100px;
     height: 40px;
     /* top: 400px;
