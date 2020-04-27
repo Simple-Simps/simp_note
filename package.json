@@ -1,0 +1,20 @@
+{
+  "name": "assignmenttwo",
+  "version": "1.0.0",
+  "description": "This is the backend for ACIT 1620 assignment 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "bcit"
+  ],
+  "author": "Nathan McNinch",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nedb": "^1.8.0"
+  }
+}
