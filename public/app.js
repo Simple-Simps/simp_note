@@ -47,7 +47,7 @@ const toggleTheme = document.getElementById("themeBtn")
 
 function darkMode() {
     const themeBtn = document.getElementById("themeBtn")
-    themeBtn.innerHTML = "Light Mode"
+    // themeBtn.innerHTML = "Light Mode"
     themeBtn.style.backgroundColor = "whitesmoke"
     themeBtn.style.color = 'black'
 
@@ -62,8 +62,8 @@ function darkMode() {
 
 
 function lightMode() {
-    const themeBtn = document.getElementById("themeBtn")
-    themeBtn.innerHTML = "Dark Mode"
+    const themeBtn = document.getElementById("themeBtn2")
+    // themeBtn.innerHTML = "Dark Mode"
     themeBtn.style.backgroundColor = "#7F8486"
 
     navigation = document.getElementById("navigation")
@@ -75,13 +75,41 @@ function lightMode() {
     main.style.color = 'black'
 }
 
-toggleTheme.addEventListener("click", () => {
-    if(toggleTheme.innerHTML == "Dark Mode"){
-      darkMode()
-    }else{
-      lightMode()
-    }
-  })
+function pinkMode() {
+  const themeBtn = document.getElementById("themeBtn3")
+  // themeBtn.innerHTML = "Dark Mode"
+  themeBtn.style.backgroundColor = "#7F8486"
+
+  navigation = document.getElementById("navigation")
+  navigation.style.backgroundColor = "pink"
+  navigation.style.color = "black"
+
+  main = document.getElementById("main")
+  main.style.backgroundColor = "grey"
+  main.style.color = 'black'
+}
+
+function blueMode() {
+  const themeBtn = document.getElementById("themeBtn4")
+
+    themeBtn.style.backgroundColor = "#7F8486"
+
+  navigation = document.getElementById("navigation")
+  navigation.style.backgroundColor = "aqua"
+  navigation.style.color = "black"
+
+  main = document.getElementById("main")
+  main.style.backgroundColor = "grey"
+  main.style.color = 'black'
+}
+
+// toggleTheme.addEventListener("click", () => {
+//     if(toggleTheme.innerHTML == "Dark Mode"){
+//       darkMode()
+//     }else{
+//       lightMode()
+//     }
+//   })
 
 
 // add a note, and save and cancel buttons
@@ -160,5 +188,4 @@ async function side(){
 
 //starting functions
 side()
-
 
