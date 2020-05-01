@@ -33,8 +33,13 @@ async function getOneNote(noteTitle) {
 async function createPTag(noteTitle) {
   const noteDiv = document.querySelector('#printList')
   const note = await getOneNote(noteTitle)
-  const newNote = `<p>${note[0].note}</p>`
-  noteDiv.innerHTML = newNote
+  if (note[0].note != undefined) {
+    const newNote = `<p>${note[0].note}</p>`
+    noteDiv.innerHTML = newNote
+  } else {
+    const newNote = `<p>[This note contains no body]</p>`
+    noteDiv.innerHTML = newNote
+  }
 }
 
 async function createList(noteTitle) {
@@ -49,14 +54,14 @@ function darkMode() {
     const themeBtn = document.getElementById("themeBtn")
     // themeBtn.innerHTML = "Light Mode"
     themeBtn.style.backgroundColor = "whitesmoke"
-    themeBtn.style.color = 'black'
+    //themeBtn.style.color = 'black'
 
     navigation = document.getElementById("navigation")
-    navigation.style.backgroundColor = "#7F8486"
+    navigation.style.backgroundColor = "#222226"
     navigation.style.color = "white"
 
     main = document.getElementById("main")
-    main.style.backgroundColor = "#B0B5B5"
+    main.style.backgroundColor = "#333337"
     main.style.color = 'white'
 }
 
@@ -64,7 +69,7 @@ function darkMode() {
 function lightMode() {
     const themeBtn = document.getElementById("themeBtn2")
     // themeBtn.innerHTML = "Dark Mode"
-    themeBtn.style.backgroundColor = "#7F8486"
+    //themeBtn.style.backgroundColor = "#7F8486"
 
     navigation = document.getElementById("navigation")
     navigation.style.backgroundColor = "#B0B5B5"
@@ -78,7 +83,7 @@ function lightMode() {
 function pinkMode() {
   const themeBtn = document.getElementById("themeBtn3")
   // themeBtn.innerHTML = "Dark Mode"
-  themeBtn.style.backgroundColor = "#7F8486"
+  //themeBtn.style.backgroundColor = "#7F8486"
 
   navigation = document.getElementById("navigation")
   navigation.style.backgroundColor = "pink"
@@ -92,7 +97,7 @@ function pinkMode() {
 function blueMode() {
   const themeBtn = document.getElementById("themeBtn4")
 
-    themeBtn.style.backgroundColor = "#7F8486"
+    //themeBtn.style.backgroundColor = "#7F8486"
 
   navigation = document.getElementById("navigation")
   navigation.style.backgroundColor = "aqua"
@@ -159,6 +164,8 @@ function showNewNote() {
             createList(noteTitle)
             myText.remove
             myText.value = ''
+            document.getElementById('text1').remove()
+            alreadyCreated=false
             
         })
         
