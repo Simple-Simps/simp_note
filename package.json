@@ -1,10 +1,10 @@
 {
-  "name": "assignmenttwo",
+  "name": "Simp Note",
   "version": "1.0.0",
-  "description": "This is the backend for ACIT 1620 assignment 2",
+  "description": "This is the backend for ACIT 2911 Agile - Simple Simps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha || true"
   },
   "keywords": [
     "example",
@@ -16,5 +16,9 @@
   "dependencies": {
     "express": "^4.16.4",
     "nedb": "^1.8.0"
+  }
+    "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
   }
 }
