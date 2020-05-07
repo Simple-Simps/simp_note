@@ -11,8 +11,8 @@
     "data",
     "bcit"
   ],
-  "author": "Nathan McNinch",
-  "license": "MIT",
+  "author": "Group 10 - Simple Simps",
+  "license": "BCIT",
   "dependencies": {
     "express": "^4.16.4",
     "nedb": "^1.8.0"
