@@ -1,5 +1,5 @@
 {
-  "name": "Simp Note",
+  "name": "simpnote",
   "version": "1.0.0",
   "description": "This is the backend for ACIT 2911 Agile - Simple Simps",
   "main": "index.js",
