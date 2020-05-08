@@ -24,10 +24,17 @@ body {
     padding-right: 30px;
 }
 
-ul {
-    list-style-type: none;
-    text-align: left;
-  }
+ul li {
+  list-style-type: none;
+  text-align: left;
+  padding: 10px 10px;
+  border-bottom: 1px solid rgba(100,100,100,0.3)
+}
+
+li:hover {
+  background-color: black;
+  color: white;
+}
 
 #main {
     background-color: whitesmoke;
