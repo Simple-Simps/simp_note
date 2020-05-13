@@ -44,7 +44,16 @@ async function createPTag(noteTitle) {
 
 async function createList(noteTitle) {
   const noteDiv = document.querySelector('#noteList')
-  noteDiv.innerHTML += '<li onclick="createPTag(\''+noteTitle+'\')">'+noteTitle+'</li>'
+  noteDiv.innerHTML += '<li class="'+noteTitle+'\" onclick="createPTag(\''+noteTitle+'\'); hideNote()">'+noteTitle+'</li>'
+}
+
+function hideNote() {
+  var x = document.querySelector("#printList")
+  if(x.style.display === "flex"){
+    x.style.display = "none"
+  } else {
+    x.style.display = "flex"
+  }
 }
 
 // toggle theme mode
