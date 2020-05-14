@@ -1,4 +1,7 @@
- //function to add a note with fetch
+
+
+
+//function to add a note with fetch
 async function addANote(noteTitle, noteBody) {
   const data = { title: noteTitle, note: noteBody }
   const options = {
@@ -29,17 +32,23 @@ async function getOneNote(noteTitle) {
   return await json
 }
 
+
 // example function for creating a p tag to display a note
 async function createPTag(noteTitle) {
   const noteDiv = document.querySelector('#printList')
   const note = await getOneNote(noteTitle)
   if (note[0].note != undefined) {
-    const newNote = `<p>${note[0].note}</p>`
+    const newNote = `<ul id="myList"><li>${note[0].note}</li></ul>` 
     noteDiv.innerHTML = newNote
+
   } else {
     const newNote = `<p>[This note contains no body]</p>`
     noteDiv.innerHTML = newNote
   }
+}
+function dlt(){
+  const  list = document.getElementById("#myList");
+  list.removeChild(list.childNodes[0]);
 }
 
 async function createList(noteTitle) {
@@ -202,6 +211,7 @@ async function side(){
 }
 
 
+
+
 //starting functions
 side()
-
