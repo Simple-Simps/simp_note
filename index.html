@@ -12,7 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-    <title>Simp Note</title>
+    <title>Note App</title>
 
   </head>
 
@@ -22,6 +22,7 @@
     <div id="navigation">
       <h1>My Notes</h1>
       <ul id="noteList">
+        <li></li>
       </ul>
     </div>
 
@@ -29,21 +30,20 @@
 
       <div id="buttons">
         <button id="newNoteBtn">New Note</button>
-        <!-- <button id="themeBtn">Dark Mode</button> -->
     </div>
 
     <div class="dropdown">
       <button class="dropbtn">Themes</button>
       <div class="dropdown-content">
-      <button id="themeBtn2" onclick="lightMode()">Light Mode (Default)</button>
-      <button id="themeBtn" onclick="darkMode()">Dark Mode</button>
-      <button id="themeBtn3" onclick="pinkMode()">Pink Mode</button>
-      <button id="themeBtn4" onclick="blueMode()">Blue Mode</button>
+        <button id="themeBtn2" onclick="lightMode()">Light Mode (Default)</button>
+        <button id="themeBtn" onclick="darkMode()">Dark Mode</button>
+        <button id="themeBtn3" onclick="pinkMode()">Pink Mode</button>
+        <button id="themeBtn4" onclick="blueMode()">Blue Mode</button>
       </div>
     </div>
     
       
-    <div id='printList'>Click a note title to display its contents here.</div>
+    <div id='printList'></div>
 
     <div id="text">
       <div id="text1">

@@ -20,22 +20,14 @@ body {
 }
 
 #navigation h1 {
-    padding-top: 10px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-ul li {
-  list-style-type: none;
-  text-align: left;
-  padding: 10px 10px;
-  border-bottom: 1px solid rgba(100,100,100,0.3)
-}
-
-li:hover {
-  background-color: black;
-  color: white;
-}
+ul {
+    list-style-type: none;
+    text-align: left;
+  }
 
 #main {
     background-color: whitesmoke;
@@ -66,22 +58,11 @@ button {
     margin-top: 15px;
   }
 
-#newNoteBtn:hover {
-  background-color: #3e8e41;
+#buttons:hover #newNoteBtn {
+    background-color: darkgreen;
   }
 
-/* #themeBtn {
-    float: right;
-    background-color: #7F8486;
-    border: #7F8486;
-    width: 100px;
-    height: 40px;
-    margin-top: 15px;
-    color: white;
-  } */
-
 #textBox{
-    /* position: float; */
     margin-left: 10px;
     margin-top: 80px;
     text-align: left;
@@ -91,106 +72,89 @@ button {
     border-radius: 15px;
     border: none;
     resize: none;
-    padding: 20px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: 111111;
+    padding: 10px auto;
   }
 
-#saveBtn {
+.textArea #saveBtn {
     position: relative;
-    width: 100px;
-    height: 40px;
-    /* top: 400px;
-    left: 275px; */
-    background-color: green;
-    border: none;
-    color: white;
   }
+
+#saveBtn{
+  background-color: green;
+  border: none;
+  color: white;
+}
   
-#cancelBtn {
+.textArea #cancelBtn {
     position: relative;
-    /* bottom: 60px; */
-    width: 100px;
-    height: 40px;
-    /* top: 400px;
-    left: 450px; */
-    background-color: red;
-    border: none;
-    color: white;
   }
+
+#cancelBtn {
+  background-color: red;
+  border: none;
+  color: white;
+}
   
 #printList{
-  display: flex;
-  text-align: left;
-  padding: 15px;
-  margin-left: 10px;
-  margin-top: 80px;
-  background-color: white;
-  border-radius: 15px;
+  display: block;
 }
 
-  @media screen and (max-width: 400px) {
-    body {
-        font-size: 10px;
+@media screen and (max-width: 400px) {
+  body {
+      font-size: 10px;
+  }
+
+  h1 {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 10px;
+  }
+
+  #newNoteBtn {
+      width: 70px;
+      height: 35px;
+    }
+  
+  #themeBtn {
+      width: 70px;
+      height: 35px;
     }
 
-    h1 {
-        font-size: 14px;
+    #textBox{
+      width: 275px;
+      height: 150px;
+      font-size: 10px;
+
     }
 
-    button {
-        font-size: 10px;
+    #saveBtn {
+      width: 50px;
+      height: 35px;
     }
-
-    #newNoteBtn {
-        width: 70px;
-        height: 35px;
-      }
     
-    #themeBtn {
-        width: 70px;
-        height: 35px;
-
-      }
-
-      #textBox{
-        width: 275px;
-        height: 150px;
-        font-size: 10px;
-
-      }
-
-      #saveBtn {
-        width: 50px;
-        height: 35px;
-      }
-      
-    #cancelBtn {
-        width: 50px;
-        height: 35px;
-      }
+  #cancelBtn {
+      width: 50px;
+      height: 35px;
+    }
 }
-
-
-
-
 
 
 .dropbtn {
   background-color: #4CAF50;
   color: white;
-  padding: 16px;
   font-size: 16px;
+  width: 100px;
+  height: 40px;
   border: none;
   cursor: pointer;
 }
 
 .dropdown {
-  /* position: relative;
-  display: inline-block; */
   float: right;
-  
+  margin-top: 5px;
+  transform: translateX(-10%)
 }
 
 .dropdown-content {
@@ -204,7 +168,7 @@ button {
   border-bottom-right-radius: 4px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  transform: translateX(-25%);
+  transform: translateX(-20%)
 }
 
 .dropdown-content a {

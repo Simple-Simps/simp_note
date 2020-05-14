@@ -40,14 +40,14 @@ async function createPTag(noteTitle) {
   if (note[0].note != undefined) {
     const newNote = `<ul id="myList"><li>${note[0].note}</li></ul>` 
     noteDiv.innerHTML = newNote
- 
+
   } else {
     const newNote = `<p>[This note contains no body]</p>`
     noteDiv.innerHTML = newNote
   }
 }
 function dlt(){
-  const  list = document.getElementById("myList");
+  const  list = document.getElementById("#myList");
   list.removeChild(list.childNodes[0]);
 }
 
