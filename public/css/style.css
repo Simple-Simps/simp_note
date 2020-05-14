@@ -70,19 +70,15 @@ button {
   background-color: #3e8e41;
   }
 
-#dltBtn {
-  float: center;
-  background-color: green;
+#dltBtn{
+  background-color: black;
   color: white;
-  border: green;
-  width: 100px;
-  height: 40px;
-  margin-top: 15px;
+  float: right;
 }
 
-#dltBtn:hover {
-  background-color: #3e8e41;
- }
+#dltBtn:hover{
+  background-color: red;
+}
 
 /* #themeBtn {
     float: right;
