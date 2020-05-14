@@ -1,4 +1,7 @@
- //function to add a note with fetch
+
+
+
+//function to add a note with fetch
 async function addANote(noteTitle, noteBody) {
   const data = { title: noteTitle, note: noteBody }
   const options = {
@@ -29,17 +32,37 @@ async function getOneNote(noteTitle) {
   return await json
 }
 
+
 // example function for creating a p tag to display a note
 async function createPTag(noteTitle) {
   const noteDiv = document.querySelector('#printList')
   const note = await getOneNote(noteTitle)
-  const newNote = `<p>${note[0].note}</p>`
-  noteDiv.innerHTML = newNote
+  if (note[0].note != undefined) {
+    const newNote = `<ul id="myList"><li>${note[0].note}</li></ul>` 
+    noteDiv.innerHTML = newNote
+
+  } else {
+    const newNote = `<p>[This note contains no body]</p>`
+    noteDiv.innerHTML = newNote
+  }
+}
+function dlt(){
+  const  list = document.getElementById("#myList");
+  list.removeChild(list.childNodes[0]);
 }
 
 async function createList(noteTitle) {
   const noteDiv = document.querySelector('#noteList')
-  noteDiv.innerHTML += '<li onclick="createPTag(\''+noteTitle+'\')">'+noteTitle+'</li>'
+  noteDiv.innerHTML += '<li class="'+noteTitle+'\" onclick="createPTag(\''+noteTitle+'\'); hideNote()">'+noteTitle+'</li>'
+}
+
+function hideNote() {
+  var x = document.querySelector("#printList")
+  if(x.style.display === "flex"){
+    x.style.display = "none"
+  } else {
+    x.style.display = "flex"
+  }
 }
 
 // toggle theme mode
@@ -47,24 +70,24 @@ const toggleTheme = document.getElementById("themeBtn")
 
 function darkMode() {
     const themeBtn = document.getElementById("themeBtn")
-    themeBtn.innerHTML = "Light Mode"
+    // themeBtn.innerHTML = "Light Mode"
     themeBtn.style.backgroundColor = "whitesmoke"
-    themeBtn.style.color = 'black'
+    //themeBtn.style.color = 'black'
 
     navigation = document.getElementById("navigation")
-    navigation.style.backgroundColor = "#7F8486"
+    navigation.style.backgroundColor = "#222226"
     navigation.style.color = "white"
 
     main = document.getElementById("main")
-    main.style.backgroundColor = "#B0B5B5"
+    main.style.backgroundColor = "#333337"
     main.style.color = 'white'
 }
 
 
 function lightMode() {
-    const themeBtn = document.getElementById("themeBtn")
-    themeBtn.innerHTML = "Dark Mode"
-    themeBtn.style.backgroundColor = "#7F8486"
+    const themeBtn = document.getElementById("themeBtn2")
+    // themeBtn.innerHTML = "Dark Mode"
+    //themeBtn.style.backgroundColor = "#7F8486"
 
     navigation = document.getElementById("navigation")
     navigation.style.backgroundColor = "#B0B5B5"
@@ -75,13 +98,41 @@ function lightMode() {
     main.style.color = 'black'
 }
 
-toggleTheme.addEventListener("click", () => {
-    if(toggleTheme.innerHTML == "Dark Mode"){
-      darkMode()
-    }else{
-      lightMode()
-    }
-  })
+function pinkMode() {
+  const themeBtn = document.getElementById("themeBtn3")
+  // themeBtn.innerHTML = "Dark Mode"
+  //themeBtn.style.backgroundColor = "#7F8486"
+
+  navigation = document.getElementById("navigation")
+  navigation.style.backgroundColor = "pink"
+  navigation.style.color = "black"
+
+  main = document.getElementById("main")
+  main.style.backgroundColor = "grey"
+  main.style.color = 'black'
+}
+
+function blueMode() {
+  const themeBtn = document.getElementById("themeBtn4")
+
+    //themeBtn.style.backgroundColor = "#7F8486"
+
+  navigation = document.getElementById("navigation")
+  navigation.style.backgroundColor = "aqua"
+  navigation.style.color = "black"
+
+  main = document.getElementById("main")
+  main.style.backgroundColor = "grey"
+  main.style.color = 'black'
+}
+
+// toggleTheme.addEventListener("click", () => {
+//     if(toggleTheme.innerHTML == "Dark Mode"){
+//       darkMode()
+//     }else{
+//       lightMode()
+//     }
+//   })
 
 
 // add a note, and save and cancel buttons
@@ -130,7 +181,12 @@ function showNewNote() {
             addANote(noteTitle,textArray[1])
             createList(noteTitle)
             myText.remove
+            myText.value = ''
+            document.getElementById('text1').remove()
+            alreadyCreated=false
+            
         })
+        
         
         const cancelButton = document.getElementById("cancelBtn")
         cancelButton.addEventListener("click" , () => {
@@ -155,6 +211,7 @@ async function side(){
 }
 
 
+
+
 //starting functions
 side()
-
