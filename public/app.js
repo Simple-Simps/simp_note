@@ -32,28 +32,36 @@ async function getOneNote(noteTitle) {
   return await json
 }
 
-
 // example function for creating a p tag to display a note
 async function createPTag(noteTitle) {
   const noteDiv = document.querySelector('#printList')
   const note = await getOneNote(noteTitle)
   if (note[0].note != undefined) {
-    const newNote = `<ul id="myList"><li>${note[0].note}</li></ul>` 
+    const newNote = `<p>${note[0].note}</p>`
     noteDiv.innerHTML = newNote
-
   } else {
     const newNote = `<p>[This note contains no body]</p>`
     noteDiv.innerHTML = newNote
   }
 }
-function dlt(){
-  const  list = document.getElementById("#myList");
-  list.removeChild(list.childNodes[0]);
+
+// delete note
+
+function deleteNote() {
+  var x = document.querySelector("#printList")
+  var note = document.querySelector('li')
+  if(x.style.display === "flex"){
+    x.innerHTML = 'Click a note title to display its contents here.'
+    note.innerText = 'Note Deleted'
+  } else {
+    return 'nothing happened.'
+  }
 }
+
 
 async function createList(noteTitle) {
   const noteDiv = document.querySelector('#noteList')
-  noteDiv.innerHTML += '<li class="'+noteTitle+'\" onclick="createPTag(\''+noteTitle+'\'); hideNote()">'+noteTitle+'</li>'
+  noteDiv.innerHTML += '<li onclick="createPTag(\''+noteTitle+'\'); hideNote();">'+noteTitle+'</li>'
 }
 
 function hideNote() {
