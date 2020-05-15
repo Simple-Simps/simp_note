@@ -1,6 +1,3 @@
-
-
-
 //function to add a note with fetch
 async function addANote(noteTitle, noteBody) {
   const data = { title: noteTitle, note: noteBody }
@@ -45,23 +42,17 @@ async function createPTag(noteTitle) {
   }
 }
 
-// delete note
-
-function deleteNote() {
-  var x = document.querySelector("#printList")
-  var note = document.querySelector('li')
-  if(x.style.display === "flex"){
-    x.innerHTML = 'Click a note title to display its contents here.'
-    note.innerText = 'Note Deleted'
-  } else {
-    return 'nothing happened.'
-  }
-}
-
-
 async function createList(noteTitle) {
   const noteDiv = document.querySelector('#noteList')
   noteDiv.innerHTML += '<li onclick="createPTag(\''+noteTitle+'\'); hideNote();">'+noteTitle+'</li>'
+}
+
+// delete note
+function deleteNote() {
+  var x = document.querySelector("#printList")
+  var note = document.querySelector('li')
+  note.remove()
+  x.innerHTML = 'Click a note title to display its contents here.'
 }
 
 function hideNote() {
@@ -78,10 +69,7 @@ const toggleTheme = document.getElementById("themeBtn")
 
 function darkMode() {
     const themeBtn = document.getElementById("themeBtn")
-    // themeBtn.innerHTML = "Light Mode"
     themeBtn.style.backgroundColor = "whitesmoke"
-    //themeBtn.style.color = 'black'
-
     navigation = document.getElementById("navigation")
     navigation.style.backgroundColor = "#222226"
     navigation.style.color = "white"
@@ -94,9 +82,6 @@ function darkMode() {
 
 function lightMode() {
     const themeBtn = document.getElementById("themeBtn2")
-    // themeBtn.innerHTML = "Dark Mode"
-    //themeBtn.style.backgroundColor = "#7F8486"
-
     navigation = document.getElementById("navigation")
     navigation.style.backgroundColor = "#B0B5B5"
     navigation.style.color = "black"
@@ -108,9 +93,6 @@ function lightMode() {
 
 function pinkMode() {
   const themeBtn = document.getElementById("themeBtn3")
-  // themeBtn.innerHTML = "Dark Mode"
-  //themeBtn.style.backgroundColor = "#7F8486"
-
   navigation = document.getElementById("navigation")
   navigation.style.backgroundColor = "pink"
   navigation.style.color = "black"
@@ -122,9 +104,6 @@ function pinkMode() {
 
 function blueMode() {
   const themeBtn = document.getElementById("themeBtn4")
-
-    //themeBtn.style.backgroundColor = "#7F8486"
-
   navigation = document.getElementById("navigation")
   navigation.style.backgroundColor = "aqua"
   navigation.style.color = "black"
@@ -142,7 +121,6 @@ function blueMode() {
 //     }
 //   })
 
-
 // add a note, and save and cancel buttons
 const newNoteBtn = document.getElementById("newNoteBtn")
 let alreadyCreated = false
@@ -155,6 +133,7 @@ function showNewNote() {
         document.getElementById('text').appendChild(text1)
         const mtDiv = document.getElementById("text1");
         console.log(mtDiv)
+      
          // create note
         const newNote = document.createElement("textArea");
         newNote.setAttribute("class","textBox");
@@ -170,7 +149,6 @@ function showNewNote() {
 
         mtDiv.appendChild(saveBtn)
 
-
         // create cancel button
         const cancelBtn = document.createElement("button");
         cancelBtn.setAttribute("class",'cancelBtn');
@@ -178,9 +156,7 @@ function showNewNote() {
         cancelBtn.innerHTML = "Cancel"
         mtDiv.appendChild(cancelBtn)
 
-
         const saveButton = document.getElementById("saveBtn")
-        
 
         saveButton.addEventListener("click", () => {
             var myText = document.getElementById("textBox");
@@ -192,21 +168,15 @@ function showNewNote() {
             myText.value = ''
             document.getElementById('text1').remove()
             alreadyCreated=false
-            
         })
-        
         
         const cancelButton = document.getElementById("cancelBtn")
         cancelButton.addEventListener("click" , () => {
           document.getElementById('text1').remove()
           alreadyCreated=false
 
-        })
-
+          })
         }
-   
-
-
     }
 
 newNoteBtn.addEventListener("click", showNewNote);
@@ -217,9 +187,6 @@ async function side(){
     createList(res[res2]['title'])
   }
 }
-
-
-
 
 //starting functions
 side()
