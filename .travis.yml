@@ -8,4 +8,4 @@ before_script:
 - npm install mocha chai --sav-dev
 
 cache:
-  npm: false
+  npm
