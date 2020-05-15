@@ -1,3 +1,8 @@
 language: node_js
+
 node_js:
 - 12.14.1
+
+before_script:
+- npm install express nedb
+- npm install mocha chai --sav-dev
