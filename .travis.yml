@@ -6,3 +6,6 @@ node_js:
 before_script:
 - npm install express nedb
 - npm install mocha chai --sav-dev
+
+cache:
+  npm: false
