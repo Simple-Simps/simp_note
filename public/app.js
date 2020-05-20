@@ -64,6 +64,24 @@ function hideNote() {
   }
 }
 
+function shareNote() {
+  const copyText = document.querySelector("p").innerText
+  
+  if (!navigator.clipboard){
+    // use old commandExec() way
+  } else{
+    navigator.clipboard.writeText(copyText).then(
+        function(){
+        alert("Copied the text: " + copyText); // success 
+        })
+      .catch(
+         function() {
+            alert("err"); // error
+      });
+  }
+  
+}
+
 // toggle theme mode
 const toggleTheme = document.getElementById("themeBtn")
 
