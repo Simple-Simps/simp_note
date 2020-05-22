@@ -10,13 +10,6 @@ body {
 #page{
 	height: 100%;
 	display: block;
-	/*
-    display: grid;
-    grid-template-areas: 
-    "navigation main";
-    grid-template-columns: 25% auto;
-    height: 100vh;
-	*/
 }
 
 #navigation,
@@ -103,16 +96,6 @@ button {
   border: red;
 }
 
-/* #themeBtn {
-    float: right;
-    background-color: #7F8486;
-    border: #7F8486;
-    width: 100px;
-    height: 40px;
-    margin-top: 15px;
-    color: white;
-  } */
-
 #textBox{
     margin-left: 10px;
     margin-top: 80px;
@@ -161,49 +144,6 @@ button {
   border-color: 111111;
 }
 
-  @media screen and (max-width: 400px) {
-    body {
-        font-size: 10px;
-    }
-
-    h1 {
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 10px;
-    }
-
-    #newNoteBtn {
-        width: 70px;
-        height: 35px;
-      }
-    
-    #themeBtn {
-        width: 70px;
-        height: 35px;
-
-      }
-
-      #textBox{
-        width: 275px;
-        height: 150px;
-        font-size: 10px;
-
-      }
-
-      #saveBtn {
-        width: 50px;
-        height: 35px;
-      }
-      
-    #cancelBtn {
-        width: 50px;
-        height: 35px;
-      }
-}
-
-
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -246,4 +186,46 @@ button {
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+ @media screen and (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 10px;
+    }
+
+    #newNoteBtn {
+        width: 70px;
+        height: 35px;
+      }
+    
+    #themeBtn {
+        width: 70px;
+        height: 35px;
+
+      }
+
+      #textBox{
+        width: 275px;
+        height: 150px;
+        font-size: 10px;
+
+      }
+
+      #saveBtn {
+        width: 50px;
+        height: 35px;
+      }
+      
+    #cancelBtn {
+        width: 50px;
+        height: 35px;
+      }
 }
