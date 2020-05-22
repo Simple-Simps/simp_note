@@ -7,7 +7,7 @@ Use npm to install express, nedb, and nodemailer
 npm i express nedb nodemailer
 ```
 
-# Note Features
+# app.js
 ```
 addANote() adds a note to the database
 
@@ -40,6 +40,9 @@ pinkMode() toggles the webpage to change the theme to pink mode with a pink nav 
 
 blueMode() toggles the webpage to change the theme to pink mode with a blue nav and grey main page background colour
 ```
+
+# index.js
+Initializes the local database to get /allNotes, /oneNote, /newNote, and to /shareNotes.
 
 # Authors and acknowledgement
 Braedon MacDonald,
