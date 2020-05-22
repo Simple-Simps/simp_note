@@ -1,4 +1,3 @@
-
 //function to add a note with fetch
 async function addANote(noteTitle, noteBody) {
 	const data = { title: noteTitle, note: noteBody }
@@ -64,22 +63,10 @@ function hideNote() {
 function deleteNote() {
 	var x = document.querySelector("#printList")
 	var note = document.querySelector('li')
-	// if(x.style.display === "flex"){
-	//   x.innerHTML = 'Click a note title to display its contents here.'
-	//   note.innerText = 'Note Deleted'
-	// } else {
-	//   return 'nothing happened.'
-	// }
-	// x.remove()
+	
 	note.remove()
 	x.innerHTML = 'Click a note title to display its contents here.'
 }
-
-// // edit note
-// function editNote() {
-//   hello
-// }
-
 
 // toggle theme mode
 const toggleTheme = document.getElementById("themeBtn")
@@ -100,7 +87,6 @@ function darkMode() {
 	console.log('darkMode is running')
 	return 'darkMode is running'
 }
-
 
 function lightMode() {
 	const themeBtn = document.getElementById("themeBtn2")
@@ -149,15 +135,6 @@ function blueMode() {
 	console.log('blueMode is running')
 	return 'blueMode is running'
 }
-
-// toggleTheme.addEventListener("click", () => {
-//     if(toggleTheme.innerHTML == "Dark Mode"){
-//       darkMode()
-//     }else{
-//       lightMode()
-//     }
-//   })
-
 
 // add a note, and save and cancel buttons
 const newNoteBtn = document.getElementById("newNoteBtn")
