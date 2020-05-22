@@ -1,5 +1,5 @@
 # simp_note
-Online Note Taking App
+Simp Note is an online note taking app that users can use to create and save notes to a local database.
 
 # Node Modules
 Use npm to install express, nedb, and nodemailer
