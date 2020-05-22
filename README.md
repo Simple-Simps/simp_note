@@ -26,6 +26,11 @@ hideNote() used to hide a displayed note
 deleteNote() deletes a note
 
 showNewNote() opens up a text box and creates save and cancel buttons
+
+closeSideBar() toggles the navigation bar to hide/show the note list
+
+anonymous function to share notes enables users to choose an email to send notes to a chosen email
+
 ```
 Theme toggle
 ```
