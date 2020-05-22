@@ -10,6 +10,7 @@ npm i express nedb nodemailer
 # index.js
 Initializes the local database to get /allNotes, /oneNote, /newNote, and to /shareNotes.
 
+# To run
 Run
 ```
 node index.js
