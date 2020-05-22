@@ -7,15 +7,15 @@ Use npm to install express, nedb, and nodemailer
 npm i express nedb nodemailer
 ```
 
-# index.js
-Initializes the local database to get /allNotes, /oneNote, /newNote, and to /shareNotes.
-
 # To run
 Run
 ```
 node index.js
 ```
 in the console and follow the link to start up the project.
+
+# index.js
+Initializes the local database to get /allNotes, /oneNote, /newNote, and to /shareNotes.
 
 # app.js
 ```
