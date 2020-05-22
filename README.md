@@ -44,9 +44,9 @@ blueMode() toggles the webpage to change the theme to pink mode with a blue nav 
 ```
 
 # Authors and acknowledgement
-Braedon MacDonald
-Htoo Khant Myat Myint
-Aiden Lonquist
-Eric Ng
-Taylor Nguyen
-Mariah Elyse Mirzayan
+Braedon MacDonald,
+Htoo Khant Myat Myint,
+Aiden Lonquist,
+Eric Ng,
+Taylor Nguyen,
+Mariah Elyse Mirzayan,
