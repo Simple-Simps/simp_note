@@ -1,4 +1,3 @@
-const uniqid = require('uniqid')
 const express = require('express')
 const Datastore = require('nedb')
 const mailer = require('nodemailer')
