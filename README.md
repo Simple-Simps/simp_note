@@ -2,14 +2,12 @@
 Online Note Taking App
 
 # Node Modules
-
 Use npm to install express, nedb, and nodemailer
 ```
 npm i express nedb nodemailer
 ```
 
 # Note Features
-
 ```
 addANote() adds a note to the database
 
@@ -49,4 +47,4 @@ Htoo Khant Myat Myint,
 Aiden Lonquist,
 Eric Ng,
 Taylor Nguyen,
-Mariah Elyse Mirzayan,
+Mariah Elyse Mirzayan
